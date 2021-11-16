@@ -26,6 +26,7 @@ github_username: slvrtrn
 
 # Build settings
 theme: jekyll-whiteglass
+remote_theme: yous/whiteglass
 plugins:
   - jekyll-archives
   - jekyll-paginate
