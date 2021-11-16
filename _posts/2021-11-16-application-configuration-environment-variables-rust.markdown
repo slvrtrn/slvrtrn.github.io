@@ -48,7 +48,7 @@ impl Config {
     }
 }
 
-fn main() -> anyhow::Result<()> {
+fn main() -> std::io::Result<()> {
     envy::from_env::<Config>()?;
     Ok(())
 }
@@ -94,7 +94,7 @@ fn load_config() -> std::io::Result<Config> {
     }
 }
 
-fn main() -> anyhow::Result<()> {
+fn main() -> std::io::Result<()> {
     let config = load_config()?;
     Ok(println!("Magic number is {}", config.magic_number))
 }
@@ -123,7 +123,7 @@ use globals::CONFIG;
 
 mod globals;
 
-fn main() -> anyhow::Result<()> {
+fn main() -> std::io::Result<()> {
     lazy_static::initialize(&CONFIG);
     Ok(println!("Magic number is {}", CONFIG.magic_number))
 }
